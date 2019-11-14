@@ -1,73 +1,74 @@
 {
-    "name": "scrapoxy",
-    "version": "3.1.1",
-    "main": "index.js",
-    "author": {
-        "name": "Fabien Vauchelles",
-        "email": "fabien@vauchelles.com",
-        "url": "http://fabien.vauchelles.com"
-    },
-    "description": "Scrapoxy is a proxy for scrapers",
-    "url": "https://github.com/fabienvauchelles/scrapoxy",
-    "homepage": "https://github.com/fabienvauchelles/scrapoxy",
-    "repository": "fabienvauchelles/scrapoxy",
-    "license": "MIT",
-    "keywords": [
-        "aws",
-        "casperjs",
-        "crawl",
-        "crawling",
-        "ec2",
-        "http",
-        "http-proxy",
-        "ovh",
-        "proxy",
-        "phantomjs",
-        "router",
-        "scraper",
-        "scraping",
-        "scrapy",
-        "selenium",
-        "squid",
-        "tinyproxy",
-        "webscraper",
-        "webscraping"
-    ],
-    "dependencies": {
-        "aws-sdk": "~2.171.0",
-        "bluebird": "~3.5.1",
-        "body-parser": "~1.18.2",
-        "commander": "~2.12.2",
-        "compression": "~1.7.1",
-        "cors": "~2.8.4",
-        "express": "~4.16.2",
-        "lodash": "~4.17.4",
-        "moment": "~2.19.4",
-        "morgan": "~1.9.0",
-        "ovh": "~2.0.1",
-        "request": "~2.83.0",
-        "socket.io": "~2.0.4",
-        "winston": "~2.4.0"
-    },
-    "devDependencies": {
-        "chai": "~4.1.2",
-        "eslint": "~4.13.1",
-        "gulp": "~3.9.1",
-        "gulp-eslint": "~4.0.0",
-        "gulp-exit": "~0.0.2",
-        "gulp-load-plugins": "~1.5.0",
-        "gulp-mocha": "~4.3.1",
-        "interpret": "~1.1.0",
-        "multimatch": "~2.1.0"
-    },
-    "engines": {
-        "node": ">=8.0.0"
-    },
-    "scripts": {
-        "start": "node server/index.js"
-    },
-    "preferGlobal": true,
-    "bin": {
-        "scrapoxy": "server/index.js"
-    }
+  "name": "scrapoxy",
+  "version": "3.1.1",
+  "main": "index.js",
+  "author": {
+    "name": "Fabien Vauchelles",
+    "email": "fabien@vauchelles.com",
+    "url": "http://fabien.vauchelles.com"
+  },
+  "description": "Scrapoxy is a proxy for scrapers",
+  "url": "https://github.com/fabienvauchelles/scrapoxy",
+  "homepage": "https://github.com/fabienvauchelles/scrapoxy",
+  "repository": "fabienvauchelles/scrapoxy",
+  "license": "MIT",
+  "keywords": [
+    "aws",
+    "casperjs",
+    "crawl",
+    "crawling",
+    "ec2",
+    "http",
+    "http-proxy",
+    "ovh",
+    "proxy",
+    "phantomjs",
+    "router",
+    "scraper",
+    "scraping",
+    "scrapy",
+    "selenium",
+    "squid",
+    "tinyproxy",
+    "webscraper",
+    "webscraping"
+  ],
+  "dependencies": {
+    "aws-sdk": "~2.171.0",
+    "bluebird": "~3.5.1",
+    "body-parser": "~1.18.2",
+    "commander": "~2.12.2",
+    "compression": "~1.7.1",
+    "cors": "~2.8.4",
+    "express": "~4.16.2",
+    "lodash": "~4.17.4",
+    "moment": "~2.19.4",
+    "morgan": "~1.9.0",
+    "ovh": "~2.0.1",
+    "request": "~2.83.0",
+    "socket.io": "~2.0.4",
+    "user-agents": "^1.0.440",
+    "winston": "~2.4.0"
+  },
+  "devDependencies": {
+    "chai": "~4.1.2",
+    "eslint": "~4.13.1",
+    "gulp": "~3.9.1",
+    "gulp-eslint": "~4.0.0",
+    "gulp-exit": "~0.0.2",
+    "gulp-load-plugins": "~1.5.0",
+    "gulp-mocha": "~4.3.1",
+    "interpret": "~1.1.0",
+    "multimatch": "~2.1.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "scrapoxy": "server/index.js"
+  }
 }

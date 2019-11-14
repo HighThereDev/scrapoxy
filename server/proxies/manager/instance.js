@@ -4,6 +4,7 @@ const _ = require('lodash'),
     EventEmitter = require('events').EventEmitter,
     InstanceModel = require('./instance.model'),
     pinger = require('../../common/pinger'),
+    securer = require('../../common/securer'),
     useragent = require('./useragent'),
     winston = require('winston');
 
@@ -67,6 +68,20 @@ module.exports = class Instance extends EventEmitter {
             else if (self._checkRestartTimeout) {
                 clearTimeout(self._checkRestartTimeout);
                 self._checkRestartTimeout = void 0;
+            }
+        });
+
+        // Secure the instance
+        self.on('status:updated', (newstatus) => {
+            if (newstatus === InstanceModel.STARTED) {
+                winston.debug('[Instance/%s] secure instance', self._model.name);
+                securer.secure(self._model.address)
+                    .then(() => {
+                        winston.debug('[Instance/%s] is secure', self._model.name);
+                    })
+                    .catch(() => {
+                        winston.debug('[Instance/%s] could not be secured', self._model.name);
+                    });
             }
         });
 
